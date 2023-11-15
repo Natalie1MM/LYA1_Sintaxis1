@@ -1,0 +1,4 @@
+C:\Users\Natalie M\OneDrive\Documentos\LYA1_Sintaxis1\obj\Debug\net7.0\LYA1_Sintaxis1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Natalie M\OneDrive\Documentos\LYA1_Sintaxis1\obj\Debug\net7.0\LYA1_Sintaxis1.AssemblyInfoInputs.cache
+C:\Users\Natalie M\OneDrive\Documentos\LYA1_Sintaxis1\obj\Debug\net7.0\LYA1_Sintaxis1.AssemblyInfo.cs
+C:\Users\Natalie M\OneDrive\Documentos\LYA1_Sintaxis1\obj\Debug\net7.0\LYA1_Sintaxis1.csproj.CoreCompileInputs.cache
