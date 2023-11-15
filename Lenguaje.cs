@@ -40,6 +40,7 @@ namespace LYA1_Sintaxis1
         //Librerias -> #include<identificador(.h)?> Librerias?
         private void Librerias()
         {
+
             match("#");
             match("include");
             match("<");
@@ -132,7 +133,7 @@ namespace LYA1_Sintaxis1
         {
             match("printf");
             match("(");
-            match(Tipos.Cadena);
+            match(Tipos.cadena);
             match(")");
             match(";");
         }
@@ -141,9 +142,12 @@ namespace LYA1_Sintaxis1
         {
             match("scanf");
             match("(");
-            match(Tipos.Cadena);
+            match(Tipos.cadena);
             match(")");
             match(";");
+            match(",");
+            match("&");
+            match(Tipos.Identificador);
         }
 
         //Asignacion -> Identificador (++ | --) | (= Expresion);
