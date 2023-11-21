@@ -9,8 +9,9 @@ namespace LYA1_Sintaxis1
     {
         public enum Tipos
         {
-            Identificador,Numero,Caracter,Asignacion,FinSentencia,FinArchivo,OpLogico,OperadorRelacional,OperadorTermino,IncrementoTermino,
-            OperadorFactor,IncrementoFactor,OpTernario,Cadena,Inicio,Fin
+            Identificador,Numero,Caracter,Asignacion,FinSentencia,FinArchivo,
+            OpLogico,OperadorRelacional,OperadorTermino,IncrementoTermino,
+            OperadorFactor,IncrementoFactor,OpTernario,Cadena,Inicio,Fin,tipoDatos, reservada
         }
         private string contenido;
         private Tipos  clasificacion;

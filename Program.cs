@@ -11,13 +11,9 @@ namespace LYA1_Sintaxis1
         {
             try
             {
-                using (Lenguaje L = new Sintaxis())
+                using (Lenguaje L = new Lenguaje())
                 {
-                    L.match("#");
-                    L.match("include");
-                    L.match("<");
-                    L.match(">");
-                    
+                    L.Programa();
                     /* 
                     while (!L.FinArchivo())
                     {

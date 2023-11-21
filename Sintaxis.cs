@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LYASINTAXIS
-{
+namespace LYA1_Sintaxis1{
     public class Sintaxis : Lexico
     {
         public Sintaxis()
@@ -40,5 +39,5 @@ namespace LYASINTAXIS
                 throw new Error("Sintaxis: Se espera un "+espera, log);
             }
         }
-    }
+     }
 }

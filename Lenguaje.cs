@@ -133,7 +133,7 @@ namespace LYA1_Sintaxis1
         {
             match("printf");
             match("(");
-            match(Tipos.cadena);
+            match(Tipos.Cadena);
             match(")");
             match(";");
         }
@@ -142,7 +142,7 @@ namespace LYA1_Sintaxis1
         {
             match("scanf");
             match("(");
-            match(Tipos.cadena);
+            match(Tipos.Cadena);
             match(")");
             match(";");
             match(",");
