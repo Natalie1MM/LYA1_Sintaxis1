@@ -155,17 +155,13 @@ namespace LYA1_Sintaxis1
         private void Asignacion()
         {
             match(Tipos.Identificador);
-            if (getClasificacion() == Tipos.OperadorTermino)
+            if (getClasificacion() == Tipos.IncrementoTermino)
             {
-                match(Tipos.OperadorTermino);
-            }
-            else if (getClasificacion() == Tipos.IncrementoTermino)
-            {
-
+            match(Tipos.IncrementoTermino);
             }
             else if (getClasificacion() == Tipos.IncrementoFactor)
             {
-
+            match(Tipos.IncrementoFactor);
             }
             else
             {
