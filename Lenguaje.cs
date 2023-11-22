@@ -143,10 +143,11 @@ namespace LYA1_Sintaxis1
             match("scanf");
             match("(");
             match(Tipos.Cadena);
-            match(")");
-            match(";");
             match(",");
             match("&");
+            match(")");
+            match(";");
+           
             match(Tipos.Identificador);
         }
 
@@ -200,7 +201,7 @@ namespace LYA1_Sintaxis1
         //While -> while(Condicion) bloqueInstrucciones | Instruccion
         private void While()
         {
-
+          
         }
         //Do -> do bloqueInstrucciones | Intruccion while(Condicion);
         private void Do()
@@ -214,7 +215,14 @@ namespace LYA1_Sintaxis1
         }
         //Incremento -> Identificador ++ | --
         private void Incremento()
-        {
+        { 
+            match(Tipos.Identificador);
+            if (getClasificacion()==Tipos.IncrementoFactor){
+                match(Tipos.IncrementoFactor);
+            }
+            else{
+                match(Tipos.IncrementoTermino);
+            }
 
         }
         //Main      -> void main() bloqueInstrucciones
