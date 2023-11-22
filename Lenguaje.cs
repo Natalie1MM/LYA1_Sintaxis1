@@ -147,7 +147,7 @@ namespace LYA1_Sintaxis1
             match("&");
             match(")");
             match(";");
-           
+
             match(Tipos.Identificador);
         }
 
@@ -201,26 +201,53 @@ namespace LYA1_Sintaxis1
         //While -> while(Condicion) bloqueInstrucciones | Instruccion
         private void While()
         {
-          
+            match("while");
+            match("(");
+            Condicion();
+            match(")");
+            if (getContenido() == "{")
+            {
+                bloqueInstrucciones();
+            }
+            else
+            {
+                Instruccion();
+            }
         }
         //Do -> do bloqueInstrucciones | Intruccion while(Condicion);
         private void Do()
         {
-
+            match("do");
+            bloqueInstrucciones();
+            match("while");
+            match("(");
+            Condicion();
+            match(")");
+            match(";");
         }
         //For -> for(Asignacion Condicion; Incremento) BloqueInstruccones | Intruccion 
         private void For()
         {
-
+            match("for");
+            match("(");
+            Asignacion();
+            match(";");
+            Condicion();
+            match(";");
+            Incremento();
+            match(")");
+            bloqueInstrucciones();
         }
         //Incremento -> Identificador ++ | --
         private void Incremento()
-        { 
+        {
             match(Tipos.Identificador);
-            if (getClasificacion()==Tipos.IncrementoFactor){
+            if (getClasificacion() == Tipos.IncrementoFactor)
+            {
                 match(Tipos.IncrementoFactor);
             }
-            else{
+            else
+            {
                 match(Tipos.IncrementoTermino);
             }
 

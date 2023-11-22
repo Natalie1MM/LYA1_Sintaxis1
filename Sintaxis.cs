@@ -36,7 +36,7 @@ namespace LYA1_Sintaxis1{
             }
             else
             {
-                throw new Error("Sintaxis: Se espera un "+espera, log);
+                throw new Error($"Sintaxis: Se espera un '{espera}' en la linea {linea}.", log);
             }
         }
      }
