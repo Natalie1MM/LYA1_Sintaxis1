@@ -33,10 +33,4 @@ y = Identificador
 = = Asignacion
 10 = Numero
 ; = FinSentencia
-x = Identificador
-= = Asignacion
-9 = Numero
-; = FinSentencia
-x = Identificador
-+= = IncrementoTermino
-Error Sintaxis: Se espera un ;
+Error Sintaxis: Se espera un 'Identificador' en la linea 9.

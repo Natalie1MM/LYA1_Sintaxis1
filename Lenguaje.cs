@@ -168,7 +168,6 @@ namespace LYA1_Sintaxis1
                 match("=");
                 Expresion();
             }
-            match(";");
         }
         //If -> if (Condicion) instruccion | bloqueInstrucciones 
         //      (else instruccion | bloqueInstrucciones)?
