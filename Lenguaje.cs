@@ -157,15 +157,23 @@ namespace LYA1_Sintaxis1
             match(Tipos.Identificador);
             if (getClasificacion() == Tipos.IncrementoTermino)
             {
-            match(Tipos.IncrementoTermino);
+                match(Tipos.IncrementoTermino);
             }
             else if (getClasificacion() == Tipos.IncrementoFactor)
             {
-            match(Tipos.IncrementoFactor);
+                match(Tipos.IncrementoFactor);
             }
             else
             {
-                match("=");
+                if (getContenido() == "+=" || getContenido() == "-=" || getContenido() == "*=" || getContenido() == "/=" || getContenido() == "%=")
+                {
+                    match(getContenido());
+                }
+                else
+                {
+
+                    match("=");
+                }
                 Expresion();
             }
         }
