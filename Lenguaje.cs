@@ -155,27 +155,30 @@ namespace LYA1_Sintaxis1
         private void Asignacion()
         {
             match(Tipos.Identificador);
-            if (getClasificacion() == Tipos.IncrementoTermino)
+            if (getContenido() == "++")
+            {
+                match("++");
+            }
+            else if (getContenido() == "--")
+            {
+                match("--");
+            }
+            else if (getClasificacion() == Tipos.IncrementoTermino)
             {
                 match(Tipos.IncrementoTermino);
+                Expresion();
             }
             else if (getClasificacion() == Tipos.IncrementoFactor)
             {
                 match(Tipos.IncrementoFactor);
+                Expresion();
             }
             else
             {
-                if (getContenido() == "+=" || getContenido() == "-=" || getContenido() == "*=" || getContenido() == "/=" || getContenido() == "%=")
-                {
-                    match(getContenido());
-                }
-                else
-                {
-
-                    match("=");
-                }
+                match("=");
                 Expresion();
             }
+            match(";");
         }
         //If -> if (Condicion) instruccion | bloqueInstrucciones 
         //      (else instruccion | bloqueInstrucciones)?

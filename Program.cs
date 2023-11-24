@@ -14,12 +14,12 @@ namespace LYA1_Sintaxis1
                 using (Lenguaje L = new Lenguaje())
                 {
                     L.Programa();
-                    /* 
-                    while (!L.FinArchivo())
+                     
+                    /*while (!L.FinArchivo())
                     {
                         L.nextToken();
-                    }
-                    */
+                    }*/
+                    
                 }
             } 
             catch (Exception e)
