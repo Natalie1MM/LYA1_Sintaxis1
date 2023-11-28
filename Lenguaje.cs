@@ -134,10 +134,17 @@ namespace LYA1_Sintaxis1
             match("printf");
             match("(");
             match(Tipos.Cadena);
+
+            if (getContenido() == ",")
+            {
+                match(",");
+                match(Tipos.Identificador);
+            }
+
             match(")");
             match(";");
         }
-        //Scanf -> scanf(cadena);
+        //Scanf -> scanf(cadena,&Identificdor);
         private void Scanf()
         {
             match("scanf");
@@ -145,19 +152,20 @@ namespace LYA1_Sintaxis1
             match(Tipos.Cadena);
             match(",");
             match("&");
+            match(Tipos.Identificador);
             match(")");
             match(";");
 
-            match(Tipos.Identificador);
+
         }
 
         //Asignacion -> Identificador (++ | --) | (= Expresion);
         private void Asignacion()
         {
             match(Tipos.Identificador);
-            if (getContenido() == "++"||getContenido() == "--")
+            if (getContenido() == "++" || getContenido() == "--")
             {
-               match(getContenido());
+                match(getContenido());
             }
             else if (getClasificacion() == Tipos.IncrementoTermino)
             {
@@ -233,12 +241,18 @@ namespace LYA1_Sintaxis1
             match("for");
             match("(");
             Asignacion();
-            match(";");
             Condicion();
             match(";");
             Incremento();
             match(")");
-            bloqueInstrucciones();
+            if (getContenido() == "{")
+            {
+                bloqueInstrucciones();
+            }
+            else
+            {
+                Instruccion();
+            }
         }
         //Incremento -> Identificador ++ | --
         private void Incremento()
